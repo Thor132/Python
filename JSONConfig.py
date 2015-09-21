@@ -39,6 +39,11 @@ class JSONConfig(object):
 			except:
 				return None
 		return found
+	def GetListSetting(self, key):
+		result = self.GetSetting(key)
+		if result != None and isinstance(result, list)
+			return result
+		return None
 	def SetSetting(self, key, value):
 		if self.settings == None:
 			return False
